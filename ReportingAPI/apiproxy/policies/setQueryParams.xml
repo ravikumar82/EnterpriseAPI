@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="setQueryParams">
+    <DisplayName>setQueryParams</DisplayName>
+    <Properties/>
+    <Set>
+        <Headers>
+            <Header name="UserName">ESB_USER</Header>
+            <Header name="Passphrase">ESB_SECRET_KEY</Header>
+        </Headers>
+        <QueryParams>
+            <QueryParam name="store">{request.queryparam.store}</QueryParam>
+            <QueryParam name="systemid">{request.queryparam.systemid}</QueryParam>
+            <QueryParam name="employeeId">1234</QueryParam>
+        </QueryParams>
+    </Set>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="request"/>
+</AssignMessage>

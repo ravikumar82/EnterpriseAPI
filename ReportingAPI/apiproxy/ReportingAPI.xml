@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="2" name="ReportingAPI">
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1455331109005</CreatedAt>
+    <CreatedBy>ravi_tanniru@abercrombie.com</CreatedBy>
+    <Description></Description>
+    <DisplayName>TestInternalAPI</DisplayName>
+    <LastModifiedAt>1456760710130</LastModifiedAt>
+    <LastModifiedBy>ravi_tanniru@abercrombie.com</LastModifiedBy>
+    <Policies>
+        <Policy>Raise-Fault</Policy>
+        <Policy>Spike-Arrest</Policy>
+        <Policy>checkInputParams</Policy>
+        <Policy>remove-query-param-apikey</Policy>
+        <Policy>setOutboundVariable</Policy>
+        <Policy>setQueryParams</Policy>
+        <Policy>verify-api-key</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources>
+        <Resource>jsc://checkInputParameters.js</Resource>
+        <Resource>jsc://setOutboundVariable.js</Resource>
+    </Resources>
+    <TargetServers/>
+    <TargetEndpoints>
+        <TargetEndpoint>default</TargetEndpoint>
+    </TargetEndpoints>
+    <validate>false</validate>
+</APIProxy>
